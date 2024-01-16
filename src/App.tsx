@@ -1,10 +1,18 @@
-import React from 'react';
-import './App.scss';
-import Header from './components/Header/Header';
+import Header from "./components/Header/Header";
+import Years from "./components/Years/Years";
+import CustomSwiper from "./components/CustomSwiper/CustomSwiper";
+
+import "./App.scss";
 
 function App() {
   return (
-    <Header />
+    <div className="App">
+      <Header />
+      <main className="main">
+        <Years />
+        <CustomSwiper />
+      </main>
+    </div>
   );
 }
 
