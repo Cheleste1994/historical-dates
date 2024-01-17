@@ -1,0 +1,19 @@
+.customSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  span:first-child {
+    color: #3877EE;
+    font-size: clamp(16px, 2vw, 25px);
+  }
+  span:last-child {
+    color: #42567A;
+    font-size: clamp(14px, 2vw, 20px);
+  }
+}
