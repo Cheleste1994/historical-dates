@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,14 +8,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import styles from "./CustomSwiper.module.scss";
-import { DataPeriod } from "../../constants/interface";
+import { useAppSelector } from "../../store/hooks";
+import { getDateState } from "../../store/slice/date.slice";
 
-export default memo(function CustomSwiper({
-  data: { data },
-}: {
-  data: DataPeriod;
-}) {
-  // const [controlledSwiper, setControlledSwiper] = useState(null);
+export default function CustomSwiper() {
+  const { currentPage, datePeriod } = useAppSelector(getDateState);
 
   return (
     <Swiper
@@ -43,7 +39,7 @@ export default memo(function CustomSwiper({
       modules={[Keyboard, Scrollbar, Navigation, Pagination]}
       className={styles.customSwiper}
     >
-      {data.map(({ id, year, description }) => (
+      {datePeriod[currentPage - 1]?.data.map(({ id, year, description }) => (
         <SwiperSlide key={id} className={styles.swiperSlide}>
           <span>{year}</span>
           <span>{description}</span>
@@ -51,4 +47,4 @@ export default memo(function CustomSwiper({
       ))}
     </Swiper>
   );
-});
+};
