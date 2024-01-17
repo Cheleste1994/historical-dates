@@ -1,4 +1,11 @@
 .years {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
   font-size: clamp(56px, 10vw, 200px);
   font-weight: bold;
   display: flex;
@@ -6,13 +13,82 @@
   justify-content: space-between;
   width: clamp(273px, 50vw, 973px);
   align-self: center;
+  height: 393px;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      color: #5d5fef;
+    }
+
+    &:last-child {
+      color: #ef5da8;
+    }
+  }
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  span {
+    width: 2px;
+    background-color: #42567a10;
+    position: absolute;
+  }
 
   span:first-child {
-    color: #5D5FEF;
+    width: 100%;
+    height: 1px;
   }
 
-  span:last-child {
-    color: #EF5DA8;
+  span:nth-of-type(2) {
+    width: 1px;
+    height: 100%;
   }
+}
 
+.item {
+  width: 50px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 100%;
+  background-color: red;
+  z-index: 1;
+}
+
+.item.active {
+  background-color: blue;
+}
+
+svg {
+  height: 300px;
+  overflow: visible;
+  width: 300px;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.st0 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 1;
+  stroke-miterlimit: 1;
 }

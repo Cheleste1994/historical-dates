@@ -22,13 +22,22 @@ export default function Pagintaions() {
   };
 
   return (
-    <div className={styles.paginations}>
-      <button onClick={() => handleClick("Prev")} disabled={currentPage === 1}>
-        <span />
-      </button>
-      <button onClick={() => handleClick("Next")} disabled={currentPage === datePeriod.length}>
-        <span />
-      </button>
+    <div className={`${styles.paginations} wrapper`}>
+      <span>{`0${currentPage}/0${datePeriod.length}`}</span>
+      <div>
+        <button
+          onClick={() => handleClick("Prev")}
+          disabled={currentPage === 1}
+        >
+          <span />
+        </button>
+        <button
+          onClick={() => handleClick("Next")}
+          disabled={currentPage === datePeriod.length}
+        >
+          <span />
+        </button>
+      </div>
     </div>
   );
 }

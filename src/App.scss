@@ -4,17 +4,21 @@
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
-  padding-left: clamp(20px, 17vw, 322px);
-  padding-right: clamp(20px, 17vw, 200px);
-  gap: clamp(56px, 5vw, 96px);
-  background-color: #F4F5F9;
+  margin-left: clamp(20px, 17vw, 322px);
+  margin-right: clamp(20px, 17vw, 160px);
+  border-right: 1px #42567a10 solid;
+  border-left: 1px #42567a10 solid;
+
 
   .main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: clamp(57px, 17vw, 281px);
     width: 100%;
-    padding-bottom: 104px;
+  }
+
+  .wrapper {
+    padding-left: clamp(5px, 5vw, 78px);
+
   }
 }

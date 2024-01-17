@@ -37,7 +37,7 @@ export default function CustomSwiper() {
       scrollbar={false}
       navigation={false}
       modules={[Keyboard, Scrollbar, Navigation, Pagination]}
-      className={styles.customSwiper}
+      className={`${styles.customSwiper} wrapper`}
     >
       {datePeriod[currentPage - 1]?.data.map(({ id, year, description }) => (
         <SwiperSlide key={id} className={styles.swiperSlide}>
