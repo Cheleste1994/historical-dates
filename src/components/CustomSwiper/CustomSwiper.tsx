@@ -35,7 +35,10 @@ export default function CustomSwiper() {
         },
       }}
       scrollbar={false}
-      navigation={false}
+      navigation={true}
+      pagination={{
+        clickable: true,
+      }}
       modules={[Keyboard, Scrollbar, Navigation, Pagination]}
       className={`${styles.customSwiper} wrapper`}
     >
@@ -47,4 +50,4 @@ export default function CustomSwiper() {
       ))}
     </Swiper>
   );
-};
+}

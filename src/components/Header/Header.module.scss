@@ -1,19 +1,29 @@
 .header {
   display: flex;
   flex-wrap: nowrap;
-  font-size: clamp(48px, 10vw, 56px);
+  font-size: clamp(20px, 6vw, 56px);
+  font-weight: bold;
   align-items: center;
-  padding-top: clamp(59px, 16vh, 170px) ;
+  padding-top: clamp(59px, 9vw, 170px);
   gap: clamp(5px, 5vw, 78px);
+  color: #42567a;
 
   div:first-child {
     height: 120px;
     width: 5px;
-    background: linear-gradient(#3877EE, #EF5DA8);
+    background: linear-gradient(#3877ee, #ef5da8);
   }
 
   div:last-child {
     max-width: 134px;
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    div:first-child {
+      display: none;
+    }
   }
 }

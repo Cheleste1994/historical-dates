@@ -1,14 +1,14 @@
 .paginations {
-  color: #42567A;
+  color: #42567a;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(10px, 3vw, 20px);
 
   div {
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: clamp(8px, 2vw, 20px);
 
     button {
       width: clamp(25px, 10vw, 50px);
@@ -49,5 +49,11 @@
         height: 25%;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .paginations {
+    order: 2;
   }
 }

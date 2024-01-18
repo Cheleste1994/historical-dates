@@ -1,0 +1,60 @@
+.item {
+  width: 50px;
+  height: 50px;
+  color: #42567a;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #42567a;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  visibility: hidden;
+}
+
+.title {
+  position: absolute;
+  top: -50px;
+  left: 50px;
+}
+
+.noActive {
+  position: absolute;
+  visibility: visible;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #42567a;
+  border-radius: 100%;
+  top: 22px;
+  left: 22px;
+  background-color: #42567a;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+
+.hover {
+  visibility: visible;
+
+  .noActive {
+    width: 80px;
+    height: 80px;
+    top: -15px;
+    left: -15px;
+    opacity: 0;
+  }
+}
+
+.active {
+  visibility: visible;
+
+  .noActive {
+    width: 80px;
+    height: 80px;
+    top: -15px;
+    left: -15px;
+    opacity: 0;
+  }
+}

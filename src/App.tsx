@@ -9,12 +9,11 @@ import { useLayoutEffect } from "react";
 import { useAppDispatch } from "./store/hooks";
 import { setDatePeriod } from "./store/slice/date.slice";
 
-
 function App() {
   const dispatch = useAppDispatch();
 
   useLayoutEffect(() => {
-    dispatch(setDatePeriod())
+    dispatch(setDatePeriod());
   }, [dispatch]);
 
   return (

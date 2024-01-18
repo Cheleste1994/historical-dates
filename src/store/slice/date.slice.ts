@@ -12,12 +12,17 @@ export interface DatePeriod {
 
 export interface DateSliceState {
   currentPage: number;
+  prevPage: number;
   datePeriod: DatePeriod[];
 }
 
 const MAX_TIME_PERIOD = 6;
 
-const initialState: DateSliceState = { currentPage: 1, datePeriod: [] };
+const initialState: DateSliceState = {
+  currentPage: 1,
+  prevPage: 1,
+  datePeriod: [],
+};
 
 export const dateSlice = createSlice({
   name: "date",
@@ -42,6 +47,7 @@ export const dateSlice = createSlice({
       state.datePeriod = newDateState;
     },
     setPage: (state, { payload }) => {
+      state.prevPage = state.currentPage;
       state.currentPage = payload;
     },
   },
