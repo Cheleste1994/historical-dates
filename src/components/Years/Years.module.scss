@@ -1,0 +1,71 @@
+.years {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(56px, 10vw, 200px);
+  font-weight: bold;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: clamp(273px, 50vw, 973px);
+  align-self: center;
+  height: clamp(186px, 35vw, 393px);
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      color: #5d5fef;
+    }
+
+    &:last-child {
+      color: #ef5da8;
+    }
+  }
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  > span {
+    width: 2px;
+    background-color: #42567a10;
+    position: absolute;
+  }
+
+  > span:first-child {
+    width: 100%;
+    height: 1px;
+  }
+
+  > span:nth-of-type(2) {
+    width: 1px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .circle {
+    > span {
+      background-color: #c7cdd9;
+    }
+
+    > span:nth-of-type(2) {
+      display: none;
+    }
+  }
+}

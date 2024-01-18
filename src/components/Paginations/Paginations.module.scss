@@ -1,0 +1,59 @@
+.paginations {
+  color: #42567a;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 3vw, 20px);
+
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(8px, 2vw, 20px);
+
+    button {
+      width: clamp(25px, 10vw, 50px);
+      height: clamp(25px, 10vw, 50px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid #42567a;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:first-child {
+        span {
+          transform: translateX(2px) rotate(-45deg);
+        }
+      }
+
+      &:last-child {
+        span {
+          transform: translateX(-2px) rotate(135deg);
+        }
+      }
+
+      &:active {
+        background-color: white;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+      }
+
+      span {
+        border-top: 3px solid;
+        border-left: 3px solid;
+        border-color: #42567a;
+        width: 25%;
+        height: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .paginations {
+    order: 2;
+  }
+}
