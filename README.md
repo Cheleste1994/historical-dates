@@ -1,4 +1,8 @@
-## Available Scripts
+## Historical Dates
+
+Clone the repository and install dependencies
+
+### `npm install`
 
 In the project directory, you can run:
 
